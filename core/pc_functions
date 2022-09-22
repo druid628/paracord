@@ -47,7 +47,24 @@ function pc_configurePC() {
         echo ""
         pc_echo "${GREEN_BOLD}[Success]${NC} web_install has been updated. You will need to commit and update your repo."
     fi
+
+    # .gitconfig
+    pc_echo "${RED_BOLD}Configure your .gitconfig?${NC} (y/n):"
+    read GITCONFIG_REPLY
+    if [ `echo $GITCONFIG_REPLY | tr [:upper:] [:lower:]` = "y" ]; then
+        echo "Enter your name:"
+        read NAME_OF_USER
+        sed -i "s/PC_NAME_OF_USER/$NAME_OF_USER/" $HOME/.gitconfig
+        sed -i "s/PC_NAME_OF_USER/$NAME_OF_USER/" $PARACORDSKELCPDIR/DOT.gitconfig
+        echo ""
+        echo "Enter your email:"
+        read EMAIL_OF_USER
+        sed -i "s/PC_EMAIL_OF_USER/$EMAIL_OF_USER/" $HOME/.gitconfig
+        sed -i "s/PC_EMAIL_OF_USER/$EMAIL_OF_USER/" $PARACORDSKELCPDIR/DOT.gitconfig
+        pc_echo "${GREEN_BOLD}[Success]${NC} .gitconfig has been updated. You will need to commit and update your repo."
+    fi
 }
+
 
 function pc_help() {
   $ECHO ""
