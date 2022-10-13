@@ -99,7 +99,7 @@ call pathogen#infect()
   "set foldenable
   "set foldclose=all
   set nowrap
-  set number relativenumber
+  set number "relativenumber
   set ruler
   set showcmd
   set showmatch

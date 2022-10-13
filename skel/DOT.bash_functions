@@ -133,6 +133,14 @@ function cleanUpBranches()
     fi
 }
 
+function markBranches4Deletion
+{
+    for f in $(git branch | grep $1| sed '/DELETEME/d'); 
+    do 
+      git branch -m $f DELETEME/$f; 
+    done
+}
+
 # include OS Specific Functions
 if [[ -f $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_functions ]]; then
     include_function_file  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_functions
