@@ -59,6 +59,9 @@ case $1 in
   "status")
     pc_gitStatus
     ;;
+  "edit")
+    pc_editFile $2
+    ;;
   *)
     $ECHO -e "${RED}ERROR:${NC}"
     pc_help
