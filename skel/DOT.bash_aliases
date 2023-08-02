@@ -55,7 +55,7 @@ if [[ $PC_SVN -eq 1 ]] && [[ -f '~/.svn_aliases' ]]; then
   . ~/.svn_aliases
 fi
 
-# OS Specific ALiases
+# OS Specific Aliases 
 if [ -f $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_aliases ]; then
     .  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_aliases
 fi

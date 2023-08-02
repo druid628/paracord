@@ -90,7 +90,7 @@ fi
 
 # OS Specific Environment
 if [ -f $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_env ]; then
-    source  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_env
+     source  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_env
 fi
 
 if [ -f $PARACORDDOTDIR/.local_env ]; then
@@ -99,7 +99,5 @@ if [ -f $PARACORDDOTDIR/.local_env ]; then
     fi
     source $PARACORDDOTDIR/.local_env
 fi
-
-
 
 # PHPBrew and RVM moved to .darwin_env
