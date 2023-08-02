@@ -39,8 +39,8 @@ if [[ $PC_DEBUG > 1 ]]; then
     echo "Enabling Paracord Debug INFO Level"
 fi
 
-if [[ -f $PARACORDDOTDIR/.colors ]]; then
-    source $PARACORDDOTDIR/.colors
+if [[ -f $PARACORDDOTDIR/colors ]]; then
+    source $PARACORDDOTDIR/colors
 fi
 
 # adds bash functions like lowercase, mkcd and patthadd
@@ -89,15 +89,15 @@ if [ -f $HOME/.git-completion.bash ]; then
 fi
 
 # OS Specific Environment
-if [ -f $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_env ]; then
-     source  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_env
+if [ -f $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_env ]; then
+     source  $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_env
 fi
 
-if [ -f $PARACORDDOTDIR/.local_env ]; then
+if [ -f $PARACORDDOTDIR/local_env ]; then
     if [[ $PC_DEBUG > 1 ]]; then
         echo "Enabling local environment"
     fi
-    source $PARACORDDOTDIR/.local_env
+    source $PARACORDDOTDIR/local_env
 fi
 
 # PHPBrew and RVM moved to .darwin_env

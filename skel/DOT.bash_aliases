@@ -46,8 +46,8 @@ if [ -f '/usr/bin/axel' ]; then
 fi
 
 # for the lulz
-if [ -f $PARACORDDOTDIR/.lolcatz_aliases ]; then
-  . $PARACORDDOTDIR/.lolcatz_aliases
+if [ -f $PARACORDDOTDIR/lolcatz_aliases ]; then
+  . $PARACORDDOTDIR/lolcatz_aliases
 fi
 
 # SVN. ugh.
@@ -56,11 +56,11 @@ if [[ $PC_SVN -eq 1 ]] && [[ -f '~/.svn_aliases' ]]; then
 fi
 
 # OS Specific Aliases 
-if [ -f $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_aliases ]; then
-    .  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_aliases
+if [ -f $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_aliases ]; then
+    .  $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_aliases
 fi
 
 # include machine specific aliases
-if [ -f $PARACORDDOTDIR/.local_aliases ]; then
-  . $PARACORDDOTDIR/.local_aliases
+if [ -f $PARACORDDOTDIR/local_aliases ]; then
+  . $PARACORDDOTDIR/local_aliases
 fi

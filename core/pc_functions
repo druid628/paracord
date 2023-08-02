@@ -77,7 +77,7 @@ function pc_help() {
   $ECHO "   configure       Configure Paracord repo"
 #  $ECHO "   configure-git   Configure .gitconfig with your info"
   $ECHO "   help            Display this dialog"
-  $ECHO "   edit {file}     Edit an environment variable file from $PARACORDDOTDIR "
+  $ECHO "   edit {file}     Edit an environment variable file from $PARACORDDOTDIR " # future improvement edit {env} {functionality} - e.g. edit local aliases; edit bash functions; edit darwin env -- builds the edit command based off the {env}
   $ECHO "   install         Performs an install of dot files and environment configuration"
   $ECHO "   status          Returns the (git) status of your Paracord environment"
   $ECHO "   update          Performs an  update of dot files and environment configuration"
@@ -332,9 +332,9 @@ function pc_editFile() {
   if [ $EDITOR = "" ]; then
     export EDITOR=`which vim`
   fi
-  if [ -f $HOME/.paracord/.${1} ]; then
-    $EDITOR $HOME/.paracord/.${1}
-    source $HOME/.paracord/.${1}
+  if [ -f $HOME/.paracord/${1} ]; then
+    $EDITOR $HOME/.paracord/${1}
+    source $HOME/.paracord/${1}
   else
     echo "No such file as $1"
   fi

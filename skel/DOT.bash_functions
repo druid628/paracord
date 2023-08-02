@@ -142,12 +142,12 @@ function markBranches4Deletion
 }
 
 # include OS Specific Functions
-if [[ -f $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_functions ]]; then
-    include_function_file  $PARACORDDOTDIR/.`uname -s | tr A-Z a-z`_functions
+if [[ -f $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_functions ]]; then
+    include_function_file  $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_functions
 fi
 
 # include machine specific functions
-if [ -f $PARACORDDOTDIR/.local_functions ]; then
-    include_function_file $PARACORDDOTDIR/.local_functions
+if [ -f $PARACORDDOTDIR/local_functions ]; then
+    include_function_file $PARACORDDOTDIR/local_functions
 fi
 
