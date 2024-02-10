@@ -299,7 +299,7 @@ call pathogen#infect()
     inoremap <leader>di var_dump();<ESC>2ha
     inoremap <leader>prq require();<ESC>2ha
     inoremap <leader>pfu function () {<RETURN><RETURN>}<ESC>2k_f(i
-    inoremap <leader>pdoc /**<RETURN>*<RETURN>*<RETURN>* @package _<RETURN>* @subpackage<RETURN>* @author Joshua Morse <joshua.morse@iostudio.com><RETURN>*<RETURN>*/<ESC>6ka
+    inoremap <leader>pdoc /**<RETURN>*<RETURN>*<RETURN>* @package _<RETURN>* @subpackage<RETURN>* @author Micah Breedlove <druid628@gmail.com><RETURN>*<RETURN>*/<ESC>6ka
 
   " HTML Shortcuts
     inoremap <leader>hul <ul><RETURN><TAB><li></li><RETURN><BACKSPACE></ul><ESC>k_f>a
