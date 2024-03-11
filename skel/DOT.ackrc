@@ -3,4 +3,4 @@
 --color
 --type-set=twig=.twig
 --ignore-case
-#--pager=less -r
+# --pager=less -r

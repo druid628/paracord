@@ -1,0 +1,6 @@
+# ubuntu convenience function
+function doihave() 
+{
+    dpkg --get-selections | grep -i $1
+}
+

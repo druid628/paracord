@@ -83,12 +83,6 @@ function classpathadd()
     fi
 }
 
-# ubuntu convenience function
-function doihave() 
-{
-    dpkg --get-selections | grep -i $1
-}
-
 # given a pid 
 function getOutputFile()
 {
