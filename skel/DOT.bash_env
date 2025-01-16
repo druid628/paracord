@@ -90,7 +90,7 @@ fi
 
 # OS Specific Environment
 if [ -f $PARACORDDOTDIR/PC.`uname -s | tr A-Z a-z`_env ]; then
-     source  $PARACORDDOTDIR/PC.`uname -s | tr A-Z a-z`_env
+     source  $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_env
 fi
 
 if [ -f $PARACORDDOTDIR/local_env ]; then

@@ -1,8 +1,6 @@
 #!/bin/bash
 
-PARACORDDIR="${HOME}/paracord"
-PARACORDCORE="${PARACORDDIR}/core"
-PARACORDBINDIR="${PARACORDDIR}/bin"
+source $HOME/.paracord/.configured
 
 source $PARACORDCORE/pc_functions
 

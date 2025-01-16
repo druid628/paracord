@@ -230,6 +230,7 @@ function pc_performInstall() {
         pc_echo "You've ${RED_BOLD}already${NC} installed paracord ";
         exit 1;
     fi
+    fi
 
     if [[ ! -d $PARACORDDOTDIR ]]; then
       mkdir $PARACORDDOTDIR
@@ -271,6 +272,11 @@ function pc_performInstall() {
 
     touch $PARACORDDOTDIR/.installed
     date +"%Y/%m/%d %H:%I %Z" > $PARACORDDOTDIR/.installed
+    touch $PARACORDDOTDIR/.configured
+    echo "# Paracord Directories\n" > $PARACORDDOTDIR/.configured
+    echo "PARACORDDIR=\"${HOME}/paracord\"\n" > $PARACORDDOTDIR/.configured
+    echo "PARACORDCORE=\"${PARACORDDIR}/core\"\n" > $PARACORDDOTDIR/.configured
+    echo "PARACORDBINDIR=\"${PARACORDDIR}/bin\"\n" > $PARACORDDOTDIR/.configured
     
 }
 

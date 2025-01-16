@@ -45,14 +45,14 @@ if [ -f '/usr/bin/axel' ]; then
   alias alex="/usr/bin/axel -a"
 fi
 
-# for the lulz
-if [ -f $PARACORDDOTDIR/lolcatz_aliases ]; then
-  . $PARACORDDOTDIR/lolcatz_aliases
-fi
-
 # SVN. ugh.
 if [[ $PC_SVN -eq 1 ]] && [[ -f '~/.svn_aliases' ]]; then
   . ~/.svn_aliases
+fi
+
+# for the lulz
+if [ -f $PARACORDDOTDIR/lolcatz_aliases ]; then
+  . $PARACORDDOTDIR/lolcatz_aliases
 fi
 
 # OS Specific Aliases 
