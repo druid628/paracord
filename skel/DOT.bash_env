@@ -89,8 +89,8 @@ if [ -f $HOME/.git-completion.bash ]; then
 fi
 
 # OS Specific Environment
-if [ -f $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_env ]; then
-     source  $PARACORDDOTDIR/`uname -s | tr A-Z a-z`_env
+if [ -f $PARACORDDOTDIR/PC.`uname -s | tr A-Z a-z`_env ]; then
+     source  $PARACORDDOTDIR/PC.`uname -s | tr A-Z a-z`_env
 fi
 
 if [ -f $PARACORDDOTDIR/local_env ]; then
@@ -98,6 +98,10 @@ if [ -f $PARACORDDOTDIR/local_env ]; then
         echo "Enabling local environment"
     fi
     source $PARACORDDOTDIR/local_env
+fi
+
+if [ -f $HOME/.composer/vendor/bin ]; then
+  pathadd $HOME/.composer/vendor/bin/
 fi
 
 # PHPBrew and RVM moved to .darwin_env
