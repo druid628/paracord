@@ -230,7 +230,6 @@ function pc_performInstall() {
         pc_echo "You've ${RED_BOLD}already${NC} installed paracord ";
         exit 1;
     fi
-    fi
 
     if [[ ! -d $PARACORDDOTDIR ]]; then
       mkdir $PARACORDDOTDIR
